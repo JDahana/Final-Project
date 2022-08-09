@@ -352,6 +352,13 @@ body{
     padding-left: 100px;
 }
 
+@media only screen and (max-width: 600px) {
+    .calltoaction {
+      grid-template-rows: 400px 170px 200px 200px;
+      grid-template-columns: 1fr;
+    }
+  }
+  
 
 /*FOOTER SECTION*/
 
