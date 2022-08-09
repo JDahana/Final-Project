@@ -1,0 +1,464 @@
+/*HEADER & NAV BAR STYLES*/
+
+body{
+    margin: 0;
+     padding: 0;
+     font-family: 'Noto Serif', serif;
+}
+.logo-image{
+    width: 300px;
+    height: 65px;
+    border-radius: 5%;
+    overflow: hidden;
+}
+ .navigation {
+     height: 65px;
+     background: #ffffff;
+}
+ .brand {
+     position: absolute;
+     padding-left: 20px;
+     float: left;
+     line-height: 65px;
+
+}
+ .brand a, .brand a:visited {
+     color: #ffffff;
+     text-decoration: none;
+}
+ .nav-container {
+     max-width: 1000px;
+     margin: 0 auto;
+}
+ nav {
+     float: right;
+}
+ nav ul {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+}
+ nav ul li {
+     float: left;
+     position: relative;
+}
+ nav ul li a,nav ul li a:visited {
+     display: block;
+     padding: 0 20px;
+     line-height: 55px;
+     color: #318162;
+     background: #fff ;
+     text-decoration: none;
+}
+ nav ul li a{
+     background: transparent;
+     color: #318162;
+}
+ nav ul li a:hover, nav ul li a:visited:hover {
+     background: #318162;
+     color: #ffffff;
+}
+ .navbar-dropdown li a{
+     background: #318162;
+}
+ nav ul li a:not(:only-child):after, nav ul li a:visited:not(:only-child):after {
+     padding-left: 4px;
+     content: ' \025BE';
+}
+ nav ul li ul li {
+     min-width: 190px;
+}
+ nav ul li ul li a {
+     padding: 15px;
+     line-height: 20px;
+}
+ .navbar-dropdown {
+     position: absolute;
+     display: none;
+     z-index: 1;
+     background: #fff;
+     box-shadow: 0 0 35px 0 rgba(0,0,0,0.25);
+}
+/* nav responsive design */
+ .nav-mobile {
+     display: none;
+     position: absolute;
+     top: 0;
+     right: 0;
+     background: transparent;
+     height: 55px;
+     width: 70px;
+}
+ @media only screen and (max-width: 600px) {
+     .nav-mobile {
+         display: block;
+    }
+     nav {
+         width: 100%;
+         padding: 55px 0 15px;
+    }
+     nav ul {
+         display: none;
+    }
+     nav ul li {
+         float: none;
+    }
+     nav ul li a {
+         padding: 15px;
+         line-height: 20px;
+         background: #262626;
+    }
+     nav ul li ul li a {
+         padding-left: 30px;
+    }
+     .navbar-dropdown {
+         position: static;
+}
+ @media screen and (min-width:600px) {
+     .nav-list {
+         display: block !important;
+    }
+}
+ #navbar-toggle {
+     position: absolute;
+     left: 18px;
+     top: 15px;
+     cursor: pointer;
+     padding: 10px 35px 16px 0px;
+}
+ #navbar-toggle span, #navbar-toggle span:before, #navbar-toggle span:after {
+     cursor: pointer;
+     border-radius: 1px;
+     height: 3px;
+     width: 30px;
+     background: #318162;
+     position: absolute;
+     display: block;
+     content: '';
+     transition: all 300ms ease-in-out;
+}
+ #navbar-toggle span:before {
+     top: -10px;
+}
+ #navbar-toggle span:after {
+     bottom: -10px;
+}
+ #navbar-toggle.active span {
+     background-color: transparent;
+}
+ #navbar-toggle.active span:before, #navbar-toggle.active span:after {
+     top: 0;
+}
+ #navbar-toggle.active span:before {
+     transform: rotate(45deg);
+}
+ #navbar-toggle.active span:after {
+     transform: rotate(-45deg);
+}
+ }
+
+/*HERO SECTION STYLE*/
+
+#thehero {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    background-image: url(../images/iguana.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.the-inner {
+    background-color: rgba(55,55,48, 0.5);
+    width: 600px;
+    padding: 10px;
+    margin-left: 150px
+}
+
+.the-inner h1{
+    color: #FEAB79;
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 2.1rem;
+
+}
+
+.the-inner p {
+    color: #ffffff;
+    text-align: left;
+    font-size: 1.1rem;  
+}
+
+.the-inner button {
+    padding: 15px;
+    padding-bottom: 20px;;
+    color: #ffffff;
+    background-color: #318162;
+    border: none;
+    border-radius: 5px;
+    font-variant-caps: all-small-caps;
+    font-size: 14pt;
+    font-weight: 600;
+}
+
+/* Header */
+#headerGrid {
+    margin: 25px 100px;
+    display: grid;
+    height: auto;
+    min-height: 500px;
+    grid-template-rows: 60% 40%;
+    grid-template-columns: 60% 40%;
+    grid-template-areas: 
+    "text0 header1"
+    "text0 header1"
+    }
+  #text0 {
+    grid-area: text0;
+  }
+  #header1 {
+    grid-area: header1;
+    background-image: url(../images/whatiscisma1.png);
+  }
+.headerGridArea {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 10px;
+  display: grid;
+  align-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+    #headerGrid {
+      margin: 5px 25px;
+      grid-template-rows: 400px 400px;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "text0"
+        "header1"
+    }
+  }
+
+  .subHeading {
+    text-align: center;
+    width: 300px;
+    margin: 50px auto;
+  } 
+
+/* Cisma works to*/
+
+#cismaGrid {
+    margin: 25px 100px;
+    display: grid;
+    height: auto;
+    min-height: 400px;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+    "text1 cisma1"
+    "cisma2 cisma3"
+    }
+  #text1 {
+    grid-area: text1;
+  }
+  #cisma1 {
+    grid-area: cisma1;
+    background-color: #d6e6e0;
+    border-radius: 5px;
+    margin-right: 15px;
+  }
+  #cisma2 {
+    grid-area: cisma2;
+    background-color: #d6e6e0;
+    border-radius: 5px;
+    margin-right: 15px;
+  }
+  #cisma3 {
+    grid-area: cisma3;
+    background-color: #d6e6e0;
+    border-radius: 5px;
+    margin-right: 15px;
+  }
+  .cismaGridArea {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 30px;
+    display: grid;
+    align-content: center;
+  }
+
+  @media only screen and (max-width: 600px) {
+    #cismaGrid {
+      margin: 5px 25px;
+      grid-template-rows: 300px 300px 300px 300px;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "text1"
+        "cisma1"
+        "cisma2"
+        "cisma3"
+    }
+  }
+
+    /* Our mission */
+    #missionGrid {
+      margin: 25px 100px;
+      display: grid;
+      height: auto;
+      min-height: 500px;
+      grid-template-rows: 50% 50%;
+      grid-template-columns: 50% 50%;
+      grid-template-areas: 
+      "mission1 text2"
+      "mission1 text2"
+      }
+    #text2 {
+      grid-area: text2;
+    }
+    #mission1 {
+      grid-area: mission1;
+      background-image: url(../images/mission.png);
+    }
+    .missionGridArea {
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: 10px;
+        display: grid;
+        align-content: center;
+      }
+  
+      @media only screen and (max-width: 600px) {
+        #missionGrid {
+          margin: 5px 25px;
+          grid-template-rows: 400px 400px;
+          grid-template-columns: 1fr;
+          grid-template-areas:
+            "text2"
+            "mission1"
+        }
+      }
+
+      /* Our Leadership */
+      #leadershipGrid {
+        margin: 25px 100px;
+        display: grid;
+        height: auto;
+        min-height: 500px;
+        grid-template-rows: 50% 50%;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+        "text3 leadership1"
+        "text3 leadership1"
+        }
+      #text3 {
+        grid-area: text3;
+      }
+      #leadership1 {
+        grid-area: leadership1;
+        background-image: url(../images/leadership.png);
+      }
+    .leadershipGridArea {
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin: 10px;
+      display: grid;
+      align-content: center;
+    }
+
+    @media only screen and (max-width: 600px) {
+        #leadershipGrid {
+          margin: 5px 25px;
+          grid-template-rows: 400px 400px;
+          grid-template-columns: 1fr;
+          grid-template-areas:
+            "text3"
+            "leadership1"
+        }
+      }
+
+/*APP CALL TO ACTION*/
+
+.calltoaction {
+    background-color: #F3F1F1;
+    display: grid;
+    margin: 0px;
+    justify-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    grid-template-rows: 100px 100px 100px 100px;
+    grid-template-columns: 350px 350px 350px 200px;
+    padding-right: 50px;
+}
+.phone {
+    border-radius: 4px;
+    max-width: 300px;
+    max-height: 50px;
+}
+.ctatext {
+    border-radius: 4px;
+    max-width: 300px;
+    padding-right: 10px;
+}
+.applogos {
+    border-radius: 4px;
+    max-width: 300px;
+    border-right: 3px solid #373730;
+    padding-right: 50px;
+}
+.rightlogos {
+    padding-left: 100px;
+}
+
+
+/*FOOTER SECTION*/
+
+.footer {
+    background-color: #0E0E0C;
+    display: grid;
+    margin: 0px;
+    padding-top: 50px;
+    padding-left: 0px;
+    grid-template-rows: 80px 80px 80px;
+    grid-template-columns: 400px 400px 400px;
+    justify-content: center;
+}
+.copywright {
+    background-color: #0E0E0C;
+    margin: 0px;
+    padding-top: 10px;
+    padding-left: 0px;
+    padding-bottom: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+f1 {
+    color: white;
+    font-weight: 700;
+    font-size: 16pt;
+}
+f2 {
+    color:white;
+    font-weight: 700;
+    font-size: 12pt;
+}
+f3 {
+    color:white;
+    font-weight: 500;
+    font-size: 10pt;
+}
+f4 {
+    color:white;
+    font-weight: 500;
+    font-size: 10pt;
+    text-decoration: underline;
+}
