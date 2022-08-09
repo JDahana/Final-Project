@@ -397,8 +397,9 @@ f4 {
     text-decoration: underline;
 }
 
-@media all and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
     .footer {
-      grid-auto-flow: column;
+      grid-template-rows: 200px 250px 200px;
+      grid-template-columns: 1fr;
     }
   }

@@ -462,3 +462,10 @@ f4 {
     font-size: 10pt;
     text-decoration: underline;
 }
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    grid-template-rows: 200px 250px 200px;
+    grid-template-columns: 1fr;
+  }
+}
